@@ -5,12 +5,16 @@ class NurseryRhyme
   end
 
   def line number
-    "This is the #{pieces.take(number).reverse.join(' ')}\n"
+    "This is the #{sections_for_line number}\n"
   end
 
   private
 
-  def pieces
+  def sections_for_line number
+    sections.take(number).reverse.join ' '
+  end
+
+  def sections
     [
       "house that Jack built.",
       "malt that lay in the",
